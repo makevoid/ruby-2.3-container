@@ -1,4 +1,4 @@
-FROM buildpack-deps:xenial
+FROM buildpack-deps:cosmic
 
 # skip installing gem documentation
 RUN mkdir -p /usr/local/etc \
@@ -7,10 +7,10 @@ RUN mkdir -p /usr/local/etc \
 		echo 'update: --no-document'; \
 	} >> /usr/local/etc/gemrc
 
-ENV RUBY_MAJOR 2.3
-ENV RUBY_VERSION 2.3.3
-ENV RUBY_DOWNLOAD_SHA256 1a4fa8c2885734ba37b97ffdb4a19b8fba0e8982606db02d936e65bac07419dc
-ENV RUBYGEMS_VERSION 2.6.10
+ENV RUBY_MAJOR 2.5
+ENV RUBY_VERSION 2.5.3
+ENV RUBY_DOWNLOAD_SHA256 9828d03852c37c20fa333a0264f2490f07338576734d910ee3fd538c9520846c
+ENV RUBYGEMS_VERSION 2.7.8 
 
 # some of ruby's build scripts are written in ruby
 #   we purge system ruby later to make sure our final image uses what we just built
