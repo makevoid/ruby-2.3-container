@@ -51,9 +51,7 @@ RUN set -ex \
 	&& cd / \
 	&& rm -r /usr/src/ruby \
 	\
-	&& gem update --system 
-
-RUN gem install bundler
+	&& gem update --system
 
 # install things globally, for great justice
 # and don't create ".bundle" in all our apps
